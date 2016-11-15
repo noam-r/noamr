@@ -1,23 +1,79 @@
 ---
 layout: default
+title: דף הבית
 ---
+<!-- Content
+    ================================================== -->
+  <!--<div class="top-strip"></div>-->
+  <div class="content">
+    <main class="container">
+    	<div class="row-fluid">
+    		<section class="content">
+    		  <h1> {{ site.title }}</h1>
+    		</section>
+    		<ul class="entries">
+    		{% for post in paginator.posts %}
+    		  <li>
+    		    <a href="{{ post.url }}">
+                      <span>{% assign m = post.date | date: "%-m" %}
+                        {{ post.date | date: "%-d" }} ב{% case m %}{% when '1' %}ינואר{% when '2' %}פברואר{% when '3' %}מרץ{% when '4' %}אפריל{% when '5' %}מאי{% when '6' %}יוני{% when '7' %}יולי{% when '8' %}אוגוסט{% when '9' %}ספטמבר{% when '10' %}אוקטובר{% when '11' %}נובמבר{% when '12' %}דצמבר{% endcase %}{{ post.date | date: "%Y" }}
+                    </span>
+    		        <h3>{{ post.title }}</h3>
+                      <div>
+                        {{ post.content | truncatehtml | truncatewords: 150 }}
+                        <strong>קראו עוד &larr;</strong>
+                      </div>
+    		    </a>
+    		  </li>
+    		{% endfor %}
+    		</ul>
+    	</div>
+      <hr>
+      <div id="post-pagination">
+        {% if paginator.previous_page %}
+        <p class="prev">
+          {% if paginator.previous_page == 1 %}
+          <a href="/">Previous</a>
+          {% else %}
+          <a href="/page{{paginator.previous_page}}"> Previous</a>
+          {% endif %}
+        </p>
+        {% else %}
+<!--         <p class="prev disabled">
+          <span>Previous</span>
+        </p> -->
+        {% endif %}
 
-<div class="home">
+        <ul class="pages">
+          <li class="page">
+            {% if paginator.page == 1 %}
+<!--             <span class="current-page">1</span> -->
+            {% else %}
+            <a href="/">1</a>
+            {% endif %}
+          </li>
 
-  <h1 class="page-heading">Posts</h1>
+          {% for count in (2..paginator.total_pages) %}
+          <li class="page">
+            {% if count == paginator.page %}
+            <span class="current-page">{{count}}</span>
+            {% else %}
+            <a href="/page{{count}}">{{count}}</a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {% if paginator.next_page %}
+        <p class="next">
+          <a href="/page{{paginator.next_page}}">Next</a>
+        </p>
+        {% else %}
+<!--         <p class="next disabled">
+          <span>Next</span>
+        </p> -->
+        {% endif %}
+      </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+    </main>
+  </div>
