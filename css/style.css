@@ -2290,6 +2290,13 @@ main.container, main.content>.container {
     line-height: 1.9em
 }
 
+.post .meta {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  font-size: medium;
+}
+
 footer .container {
     font-family: "Alef Hebrew", 'Noto Serif';
     color: #fff;

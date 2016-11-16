@@ -15,6 +15,10 @@ layout: default
             {{ page.date | date: "%-d" }} ב{% case m %}{% when '1' %}ינואר{% when '2' %}פברואר{% when '3' %}מרץ{% when '4' %}אפריל{% when '5' %}מאי{% when '6' %}יוני{% when '7' %}יולי{% when '8' %}אוגוסט{% when '9' %}ספטמבר{% when '10' %}אוקטובר{% when '11' %}נובמבר{% when '12' %}דצמבר{% endcase %}{{ page.date | date: "%Y" }}
         </h5>
 				<h2 class="content">{{page.title}}</h2>
+        <section class="meta">
+					{{ page.description }}
+					<hr>
+				</section>
 				<section>
 					{{ content }}
 					<hr>
