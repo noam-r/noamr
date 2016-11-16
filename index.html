@@ -21,7 +21,7 @@ title: דף הבית
     		        <h3>{{ post.title }}</h3>
                       <div>
                         {{ post.content | truncatehtml | truncatewords: 150 }}
-                        <strong>קראו עוד &larr;</strong>
+                        <a href="{{post.url}}"<strong>קראו עוד &larr;</strong></a>
                       </div>
     		    </a>
     		  </li>
