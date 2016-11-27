@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
+@import url(//fonts.googleapis.com/earlyaccess/alefhebrew.css);
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, main, section {
     display: block
@@ -529,7 +529,7 @@ address {
 code, pre {
     padding: 0 3px 2px;
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-    font-size: 12px;
+    font-size: 14px;
     color: #333;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -2174,7 +2174,7 @@ main.container, main.content>.container {
     font-family: 'Noto Serif';
     font-style: normal;
     font-weight: 400;
-    src: local("Noto Serif"), local("NotoSerif"), url(http://themes.googleusercontent.com/static/fonts/notoserif/v1/eCpfeMZI7q4jLksXVRWPQxsxEYwM7FgeyaSgU71cLG0.woff) format("woff")
+    src: local("Noto Serif"), local("NotoSerif"), url(//themes.googleusercontent.com/static/fonts/notoserif/v1/eCpfeMZI7q4jLksXVRWPQxsxEYwM7FgeyaSgU71cLG0.woff) format("woff")
 }
 
 .center-txt, .content h1, .entries, .pages, .home-icon, .post h5, .post h2, footer .container {
