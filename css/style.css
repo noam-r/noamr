@@ -2280,14 +2280,14 @@ main.container, main.content>.container {
 
 .post h2 {
     font-family: "Alef Hebrew", Georgia, "Times New Roman", Times, serif;
-    font-size: 5em;
+    font-size: 3.5em;
     padding: 1.5em 0 0.5em;
     letter-spacing: 0.05em
 }
 
 .post section {
     font-family: "Alef Hebrew", 'Noto Serif';
-    line-height: 1.9em
+    line-height: 1.5em
 }
 
 .post .meta {
