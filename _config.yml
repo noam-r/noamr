@@ -12,3 +12,5 @@ exclude: ["Gemfile", "Gemfile.lock", "README.md", 'sass', 'watch.sh', 'style.scs
 
 url: https://b48.club
 enforce_ssl: b48.club
+
+plugins: [jekyll-paginate, jekyll-gist, jekyll-feed]
